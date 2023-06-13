@@ -8,10 +8,11 @@ type Formdata = {
 }
 
 const FormData: React.FC = () => {
-    const { register, handleSubmit, formState: { errors } } = useForm<Formdata>();
+    const { register, handleSubmit, formState: { errors } , reset} = useForm<Formdata>();
 
     const onSubmit = (data: Formdata) => {
         console.log(data);
+        reset();
     }
 
     return (
